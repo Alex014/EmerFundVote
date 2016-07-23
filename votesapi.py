@@ -12,6 +12,8 @@ class votesapi():
         fn=file_name if file_name else self.config_file_name
         if fn:
             self.config=jsonstorage.load_json_config(fn)
+        else:
+            self.config={}
 
     def save_config(self,file_name=None):
         fn=file_name if file_name else self.config_file_name
